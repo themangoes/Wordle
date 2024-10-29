@@ -1,1 +1,0 @@
-java -jar --module-path "C:\Users\supre\Documents\javafx-sdk-22.0.2\lib" --add-modules javafx.controls,javafx.fxml WORDLE.jar
