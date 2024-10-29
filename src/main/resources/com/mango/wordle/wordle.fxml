@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<?import java.util.ArrayList?>
+<AnchorPane fx:id="wordsAnchorPane" prefHeight="620.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mango.wordle.wordleController">
+   <children>
+      <Pane layoutX="261.0" layoutY="24.0" prefHeight="424.0" prefWidth="316.0">
+         <children>
+            <Pane layoutX="18.0" layoutY="14.0" prefHeight="60.0" prefWidth="280.0">
+               <children>
+                  <TextField fx:id="oneGuessOne" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="twoGuessOne" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="threeGuessOne" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fourGuessOne" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fiveGuessOne" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="18.0" layoutY="78.0" prefHeight="60.0" prefWidth="280.0">
+               <children>
+                  <TextField fx:id="fiveGuessTwo" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fourGuessTwo" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="threeGuessTwo" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="twoGuessTwo" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="oneGuessTwo" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="18.0" layoutY="146.0" prefHeight="60.0" prefWidth="280.0">
+               <children>
+                  <TextField fx:id="oneGuessThree" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="twoGuessThree" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="threeGuessThree" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fourGuessThree" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fiveGuessThree" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="18.0" layoutY="212.0" prefHeight="60.0" prefWidth="280.0">
+               <children>
+                  <TextField fx:id="oneGuessFour" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="twoGuessFour" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="threeGuessFour" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fourGuessFour" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fiveGuessFour" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="18.0" layoutY="277.0" prefHeight="60.0" prefWidth="280.0">
+               <children>
+                  <TextField fx:id="oneGuessFive" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="twoGuessFive" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="threeGuessFive" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fourGuessFive" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fiveGuessFive" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="18.0" layoutY="343.0" prefHeight="60.0" prefWidth="280.0">
+               <children>
+                  <TextField fx:id="oneGuessSix" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="twoGuessSix" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="threeGuessSix" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fourGuessSix" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fiveGuessSix" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+
+                  <fx:define>
+                     <ArrayList fx:id="GuessOne">
+                        <fx:reference source="oneGuessOne" />
+                        <fx:reference source="twoGuessOne" />
+                        <fx:reference source="threeGuessOne" />
+                        <fx:reference source="fourGuessOne" />
+                        <fx:reference source="fiveGuessOne" />
+                     </ArrayList>
+
+                     <ArrayList fx:id="GuessTwo">
+                        <fx:reference source="oneGuessTwo" />
+                        <fx:reference source="twoGuessTwo" />
+                        <fx:reference source="threeGuessTwo" />
+                        <fx:reference source="fourGuessTwo" />
+                        <fx:reference source="fiveGuessTwo" />
+                     </ArrayList>
+
+                     <ArrayList fx:id="GuessThree">
+                        <fx:reference source="oneGuessThree" />
+                        <fx:reference source="twoGuessThree" />
+                        <fx:reference source="threeGuessThree" />
+                        <fx:reference source="fourGuessThree" />
+                        <fx:reference source="fiveGuessThree" />
+                     </ArrayList>
+
+                     <ArrayList fx:id="GuessFour">
+                        <fx:reference source="oneGuessFour" />
+                        <fx:reference source="twoGuessFour" />
+                        <fx:reference source="threeGuessFour" />
+                        <fx:reference source="fourGuessFour" />
+                        <fx:reference source="fiveGuessFour" />
+                     </ArrayList>
+
+                     <ArrayList fx:id="GuessFive">
+                        <fx:reference source="oneGuessFive" />
+                        <fx:reference source="twoGuessFive" />
+                        <fx:reference source="threeGuessFive" />
+                        <fx:reference source="fourGuessFive" />
+                        <fx:reference source="fiveGuessFive" />
+                     </ArrayList>
+
+                     <ArrayList fx:id="GuessSix">
+                        <fx:reference source="oneGuessSix" />
+                        <fx:reference source="twoGuessSix" />
+                        <fx:reference source="threeGuessSix" />
+                        <fx:reference source="fourGuessSix" />
+                        <fx:reference source="fiveGuessSix" />
+                     </ArrayList>
+
+                  </fx:define>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="346.0" layoutY="484.0" text="WORDLE">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <Button layoutX="86.0" layoutY="126.0" mnemonicParsing="false" onAction="#checkButton" prefHeight="60.0" prefWidth="112.0" text="Check">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="86.0" layoutY="297.0" mnemonicParsing="false" onAction="#reset" prefHeight="60.0" prefWidth="112.0" text="New Word">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Pane fx:id="gameEndOverlay" layoutX="49.0" layoutY="41.0" prefHeight="529.0" prefWidth="512.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="620.0" layoutX="-49.0" layoutY="-41.0" opacity="0.31" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="529.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" width="512.0" />
+            <Button layoutX="212.0" layoutY="430.0" mnemonicParsing="false" onAction="#reset" text="New Word -&gt;" />
+            <Label fx:id="gameEndStatus" layoutX="211.0" layoutY="45.0" text="Game End Status" />
+            <Label layoutX="45.0" layoutY="123.0" text="Points Gained: " />
+            <Label layoutX="45.0" layoutY="147.0" text="Total Points: " />
+            <Label layoutX="39.0" layoutY="230.0" text="Current Guessing Streak: " />
+            <Label layoutX="45.0" layoutY="173.0" text="Highest Points Scored: " />
+            <Label layoutX="38.0" layoutY="261.0" text="Highest Guessing Streak: " />
+            <Label fx:id="pointsGainedLabel" layoutX="253.0" layoutY="123.0" text="." />
+            <Label fx:id="totalPointsLabel" layoutX="254.0" layoutY="147.0" text="." />
+            <Label fx:id="highestScoreLabel" layoutX="254.0" layoutY="173.0" text="." />
+            <Label fx:id="currentStreakLabel" layoutX="253.0" layoutY="230.0" text="." />
+            <Label fx:id="highestStreakLabel" layoutX="254.0" layoutY="261.0" text="." />
+            <Label layoutX="39.0" layoutY="314.0" text="Times Played" />
+            <Label fx:id="timesPlayedLabel" layoutX="255.0" layoutY="314.0" text="." />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
