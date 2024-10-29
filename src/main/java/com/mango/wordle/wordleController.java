@@ -56,6 +56,7 @@ public class wordleController{
         private int currentPoints;
         private int totalPoints;
         private int timesPlayed;
+        private String word;
 
         public wordleController(){
         }
@@ -63,6 +64,7 @@ public class wordleController{
         @FXML
         public void init(){
                 if (initialized) return;
+                word = randomWordGenerator.randomWord();
                 charNum = -1;
                 guessNum = 1;
                 curGuess = GuessOne;
@@ -88,7 +90,6 @@ public class wordleController{
         }
 
         private boolean checkIfMatches(){
-                String word = "WORDL";
                 String guess = "";
                 int correctCount = 0;
                 int[] checks = {0,0,0,0,0};
@@ -160,6 +161,7 @@ public class wordleController{
                 guessNum = 1;
                 charNum = -1;
                 currentPoints = 0;
+                word = randomWordGenerator.randomWord();
                 gameEndOverlay.setVisible(false);
                 for (TextField t : GuessSix){
                         t.setText("");
