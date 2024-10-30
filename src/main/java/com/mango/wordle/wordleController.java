@@ -14,6 +14,7 @@ import org.w3c.dom.Text;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 
 public class wordleController{
@@ -67,6 +68,7 @@ public class wordleController{
         private int highestScore;
         private int highestStreak;
         private String word;
+        private HashSet<String> currentGuesses;
 
         public wordleController(){
         }
@@ -80,6 +82,7 @@ public class wordleController{
                 curGuess = GuessOne;
                 streak = 0;
                 timesPlayed = 1;
+                currentGuesses = new HashSet<>();
                 highestScore = HighScoreNStreak.getHighScore();
                 highestStreak = HighScoreNStreak.getHighStreak();
                 gameEndOverlay.setVisible(false);
@@ -115,6 +118,10 @@ public class wordleController{
                         invalidWord.setText("Invalid Word!");
                         return -1;
                 }
+                else if (currentGuesses.contains(guess)){
+                        invalidWord.setText("Word Used!");
+                        return -1;
+                }
                 invalidWord.setText("");
 
                 for (int i = 0; i < 5; i++){
@@ -141,6 +148,7 @@ public class wordleController{
                                 curGuess.get(i).setStyle("-fx-background-color : gray");
                         }
                 }
+                currentGuesses.add(guess);
                 currentPoints = (guessNum == 6) ? 0 : 100 / guessNum;
 
                 if (correctCount == 5) {
@@ -189,6 +197,7 @@ public class wordleController{
                 guessNum = 1;
                 charNum = -1;
                 currentPoints = 0;
+                currentGuesses.clear();
                 word = randomWordGenerator.randomWord();
                 gameEndOverlay.setVisible(false);
                 for (TextField t : GuessSix){
