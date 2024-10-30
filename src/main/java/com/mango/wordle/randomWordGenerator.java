@@ -7,6 +7,19 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class randomWordGenerator {
+    static String allWords;
+
+    public static void init(){
+        try {
+            URL url = new URL("https://random-word-api.herokuapp.com/word?length=5&number=20000");
+            InputStream ip = url.openConnection().getInputStream();
+            BufferedReader br = new BufferedReader(new InputStreamReader(ip));
+            allWords = br.readLine();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
 
     public static String randomWord(){
         try{

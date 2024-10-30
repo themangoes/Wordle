@@ -53,6 +53,8 @@ public class wordleController{
         private Label cheat;
         @FXML
         private Button cheatButton;
+        @FXML
+        private Label invalidWord;
 
         private int charNum;
         private int guessNum;
@@ -89,25 +91,31 @@ public class wordleController{
         @FXML
         private void checkButton() {
 
-                boolean status = false;
+                int status = -1;
                 if (charNum == 4 && guessNum <= 6) {
                         status = checkIfMatches();
+                        if (status == -1) return;
                         guessNum++;
                         charNum = -1;
                 }
-                if (status) guessedCorrectly();
-                else if (!status && guessNum > 6){
+                if (status == 1) guessedCorrectly();
+                else if (status == 0 && guessNum > 6){
                         guessedIncorrectly();
                 }
         }
 
-        private boolean checkIfMatches(){
+        private int checkIfMatches(){
                 String guess = "";
                 int correctCount = 0;
                 int[] checks = {0,0,0,0,0};
-                for (TextField t : curGuess){
+                for (TextField t : curGuess) {
                         guess += t.getText();
                 }
+                if (!randomWordGenerator.allWords.contains(guess.toLowerCase())) {
+                        invalidWord.setText("Invalid Word!");
+                        return -1;
+                }
+                invalidWord.setText("");
 
                 for (int i = 0; i < 5; i++){
                         if (word.charAt(i) == guess.charAt(i)){
@@ -136,9 +144,9 @@ public class wordleController{
                 currentPoints = (guessNum == 6) ? 0 : 100 / guessNum;
 
                 if (correctCount == 5) {
-                        return true;
+                        return 1;
                 }
-                return false;
+                return 0;
 
         }
 

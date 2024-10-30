@@ -19,6 +19,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage1) throws IOException {
         HighScoreNStreak.init();
+        randomWordGenerator.init();
         stage = stage1;
         fxmlLoader = new FXMLLoader(Main.class.getResource("wordle.fxml"));
         scene = new Scene(fxmlLoader.load());
