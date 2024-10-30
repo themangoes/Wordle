@@ -9,62 +9,152 @@
 <?import javafx.scene.text.Font?>
 
 <?import java.util.ArrayList?>
-<AnchorPane fx:id="wordsAnchorPane" prefHeight="620.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mango.wordle.wordleController">
+<AnchorPane fx:id="wordsAnchorPane" prefHeight="620.0" prefWidth="600.0" styleClass="AnchorPane" stylesheets="@wordle.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mango.wordle.wordleController">
    <children>
       <Pane layoutX="261.0" layoutY="24.0" prefHeight="424.0" prefWidth="316.0">
          <children>
             <Pane layoutX="18.0" layoutY="14.0" prefHeight="60.0" prefWidth="280.0">
                <children>
-                  <TextField fx:id="oneGuessOne" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="twoGuessOne" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="threeGuessOne" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fourGuessOne" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fiveGuessOne" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="oneGuessOne" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="twoGuessOne" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="threeGuessOne" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fourGuessOne" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fiveGuessOne" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
                </children>
             </Pane>
             <Pane layoutX="18.0" layoutY="78.0" prefHeight="60.0" prefWidth="280.0">
                <children>
-                  <TextField fx:id="fiveGuessTwo" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fourGuessTwo" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="threeGuessTwo" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="twoGuessTwo" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="oneGuessTwo" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="fiveGuessTwo" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fourGuessTwo" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="threeGuessTwo" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="twoGuessTwo" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="oneGuessTwo" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
                </children>
             </Pane>
             <Pane layoutX="18.0" layoutY="146.0" prefHeight="60.0" prefWidth="280.0">
                <children>
-                  <TextField fx:id="oneGuessThree" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="twoGuessThree" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="threeGuessThree" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fourGuessThree" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fiveGuessThree" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="oneGuessThree" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="twoGuessThree" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="threeGuessThree" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fourGuessThree" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fiveGuessThree" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
                </children>
             </Pane>
             <Pane layoutX="18.0" layoutY="212.0" prefHeight="60.0" prefWidth="280.0">
                <children>
-                  <TextField fx:id="oneGuessFour" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="twoGuessFour" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="threeGuessFour" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fourGuessFour" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fiveGuessFour" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="oneGuessFour" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="twoGuessFour" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="threeGuessFour" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fourGuessFour" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fiveGuessFour" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
                </children>
             </Pane>
             <Pane layoutX="18.0" layoutY="277.0" prefHeight="60.0" prefWidth="280.0">
                <children>
-                  <TextField fx:id="oneGuessFive" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="twoGuessFive" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="threeGuessFive" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fourGuessFive" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fiveGuessFive" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="oneGuessFive" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="twoGuessFive" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="threeGuessFive" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fourGuessFive" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fiveGuessFive" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
                </children>
             </Pane>
             <Pane layoutX="18.0" layoutY="343.0" prefHeight="60.0" prefWidth="280.0">
                <children>
-                  <TextField fx:id="oneGuessSix" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="twoGuessSix" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="threeGuessSix" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fourGuessSix" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0" />
-                  <TextField fx:id="fiveGuessSix" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0" />
+                  <TextField fx:id="oneGuessSix" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="twoGuessSix" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="threeGuessSix" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fourGuessSix" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
+                  <TextField fx:id="fiveGuessSix" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font></TextField>
 
                   <fx:define>
                      <ArrayList fx:id="GuessOne">
@@ -120,39 +210,78 @@
             </Pane>
          </children>
       </Pane>
-      <Label layoutX="346.0" layoutY="484.0" text="WORDLE">
+      <Label layoutX="297.0" layoutY="478.0" text="WORDLE" textAlignment="CENTER">
          <font>
-            <Font size="43.0" />
+            <Font name="Franklin Gothic Medium" size="63.0" />
          </font>
       </Label>
       <Button layoutX="86.0" layoutY="126.0" mnemonicParsing="false" onAction="#checkButton" prefHeight="60.0" prefWidth="112.0" text="Check">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Button>
       <Button layoutX="86.0" layoutY="297.0" mnemonicParsing="false" onAction="#reset" prefHeight="60.0" prefWidth="112.0" text="New Word">
          <font>
-            <Font size="17.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Button>
-      <Pane fx:id="gameEndOverlay" layoutX="49.0" layoutY="41.0" prefHeight="529.0" prefWidth="512.0">
+      <Pane fx:id="gameEndOverlay" layoutX="49.0" layoutY="36.0" prefHeight="534.0" prefWidth="512.0" visible="false">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="620.0" layoutX="-49.0" layoutY="-41.0" opacity="0.31" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="529.0" layoutY="3.0" stroke="BLACK" strokeType="INSIDE" width="512.0" />
-            <Button layoutX="212.0" layoutY="430.0" mnemonicParsing="false" onAction="#reset" text="New Word -&gt;" />
-            <Label fx:id="gameEndStatus" layoutX="211.0" layoutY="45.0" text="Game End Status" />
-            <Label layoutX="45.0" layoutY="123.0" text="Points Gained: " />
-            <Label layoutX="45.0" layoutY="147.0" text="Total Points: " />
-            <Label layoutX="39.0" layoutY="230.0" text="Current Guessing Streak: " />
-            <Label layoutX="45.0" layoutY="173.0" text="Highest Points Scored: " />
-            <Label layoutX="38.0" layoutY="261.0" text="Highest Guessing Streak: " />
-            <Label fx:id="pointsGainedLabel" layoutX="253.0" layoutY="123.0" text="." />
-            <Label fx:id="totalPointsLabel" layoutX="254.0" layoutY="147.0" text="." />
-            <Label fx:id="highestScoreLabel" layoutX="254.0" layoutY="173.0" text="." />
-            <Label fx:id="currentStreakLabel" layoutX="253.0" layoutY="230.0" text="." />
-            <Label fx:id="highestStreakLabel" layoutX="254.0" layoutY="261.0" text="." />
-            <Label layoutX="39.0" layoutY="314.0" text="Times Played" />
-            <Label fx:id="timesPlayedLabel" layoutX="255.0" layoutY="314.0" text="." />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="620.0" layoutX="-49.0" layoutY="-41.0" opacity="0.05" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="534.0" layoutY="-5.0" stroke="BLACK" strokeType="INSIDE" width="512.0" />
+            <Button layoutX="199.0" layoutY="429.0" mnemonicParsing="false" onAction="#reset" prefHeight="26.0" prefWidth="112.0" text="New Word -&gt;" />
+            <Label fx:id="gameEndStatus" layoutX="-1.0" layoutY="16.0" prefHeight="48.0" prefWidth="512.0" text="Game End Status">
+               <font>
+                  <Font name="Lucida Console" size="25.0" />
+               </font></Label>
+            <Label layoutX="45.0" layoutY="123.0" text="Points Gained: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="45.0" layoutY="147.0" text="Total Points: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="39.0" layoutY="230.0" text="Current Guessing Streak: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="45.0" layoutY="173.0" text="Highest Points Scored: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="38.0" layoutY="261.0" text="Highest Guessing Streak: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="pointsGainedLabel" layoutX="-1.0" layoutY="125.0" prefHeight="17.0" prefWidth="512.0" snapToPixel="false" text=".">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="totalPointsLabel" layoutY="147.0" prefHeight="17.0" prefWidth="512.0" text=".">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="highestScoreLabel" layoutY="173.0" prefHeight="17.0" prefWidth="512.0" text=".">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="currentStreakLabel" layoutY="230.0" prefHeight="17.0" prefWidth="512.0" text=".">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label fx:id="highestStreakLabel" layoutX="-1.0" layoutY="261.0" prefHeight="17.0" prefWidth="512.0" text=".">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label layoutX="39.0" layoutY="314.0" text="Times Played">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label fx:id="timesPlayedLabel" layoutY="314.0" prefHeight="17.0" prefWidth="512.0" text=".">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
          </children>
       </Pane>
    </children>

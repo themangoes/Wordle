@@ -47,6 +47,8 @@ public class wordleController{
         private Label highestStreakLabel;
         @FXML
         private Label timesPlayedLabel;
+        @FXML
+        private Label invalidWordLabel;
 
         private int charNum;
         private int guessNum;

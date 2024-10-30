@@ -21,9 +21,10 @@ public class Main extends Application {
         stage = stage1;
         fxmlLoader = new FXMLLoader(Main.class.getResource("wordle.fxml"));
         scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(Main.class.getResource("wordle.css").toExternalForm());
         wordleController c = fxmlLoader.getController();
         c.init();
-        stage.setTitle("Hello!");
+        stage.setTitle("WORDLE!");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

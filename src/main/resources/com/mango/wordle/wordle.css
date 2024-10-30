@@ -1,0 +1,44 @@
+TextField
+{
+    -fx-background-color: #111111;
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-color: "black";
+    -fx-text-fill: #FF7F7F;
+}
+
+AnchorPane
+{
+    -fx-background-color: #111111;
+}
+
+Label
+{
+    -fx-text-fill: #FF7F7F;
+    -fx-alignment: center;
+}
+
+Rectangle
+{
+    -fx-fill: #5A5A5A;
+    -fx-stroke: "black";
+    -fx-stroke-width: 3px;
+}
+
+Button
+{
+    -fx-background-color: rgba(0,0,128,0.2);
+    -fx-border-width: 2px;
+    -fx-border-color: #FF7F7F;
+    -fx-text-fill: "white";
+    -fx-alignment: center;
+    -fx-font-family: "Lucida Console";
+    -fx-font-size: 16px;
+}
+Button:hover
+{
+    -fx-background-color: rgba(0,0,128,0.2);
+    -fx-text-fill: #FF7F7F;
+    -fx-border-color: "white";
+    -fx-font-size: 17px;
+}
