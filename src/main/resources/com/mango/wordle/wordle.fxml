@@ -17,23 +17,23 @@
                <children>
                   <TextField fx:id="oneGuessOne" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="twoGuessOne" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="threeGuessOne" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fourGuessOne" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fiveGuessOne" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                </children>
             </Pane>
@@ -41,23 +41,23 @@
                <children>
                   <TextField fx:id="fiveGuessTwo" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fourGuessTwo" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="threeGuessTwo" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="twoGuessTwo" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="oneGuessTwo" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                </children>
             </Pane>
@@ -65,23 +65,23 @@
                <children>
                   <TextField fx:id="oneGuessThree" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="twoGuessThree" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="threeGuessThree" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fourGuessThree" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fiveGuessThree" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                </children>
             </Pane>
@@ -89,23 +89,23 @@
                <children>
                   <TextField fx:id="oneGuessFour" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="twoGuessFour" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="threeGuessFour" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fourGuessFour" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fiveGuessFour" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                </children>
             </Pane>
@@ -113,23 +113,23 @@
                <children>
                   <TextField fx:id="oneGuessFive" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="twoGuessFive" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="threeGuessFive" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fourGuessFive" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fiveGuessFive" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                </children>
             </Pane>
@@ -137,23 +137,23 @@
                <children>
                   <TextField fx:id="oneGuessSix" alignment="CENTER" disable="true" editable="false" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="twoGuessSix" alignment="CENTER" disable="true" editable="false" layoutX="56.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="threeGuessSix" alignment="CENTER" disable="true" editable="false" layoutX="112.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fourGuessSix" alignment="CENTER" disable="true" editable="false" layoutX="168.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
                   <TextField fx:id="fiveGuessSix" alignment="CENTER" disable="true" editable="false" layoutX="224.0" prefHeight="60.0" prefWidth="56.0">
                      <font>
-                        <Font name="Arial Bold" size="24.0" />
+                        <Font name="Arial Bold" size="20.0" />
                      </font></TextField>
 
                   <fx:define>

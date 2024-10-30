@@ -88,7 +88,7 @@ public class wordleController{
                 gameEndOverlay.setVisible(false);
                 wordsAnchorPane.setOnKeyPressed((KeyEvent e) -> typeChar(e));
                 initialized = true;
-                cheatButton.setVisible(true);
+                cheatButton.setVisible(false);
         }
 
         @FXML
