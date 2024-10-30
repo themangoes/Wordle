@@ -8,22 +8,43 @@ public class HighScoreNStreak {
     static Properties properties;
     static FileOutputStream propertiesFileOutputStream;
     static FileInputStream propertiesFileInputStream;
+    static boolean fileNotFound = false;
+    static boolean initialized = false;
 
-    public static void init() throws IOException {
+    public static void init(){
+        try{
+            FileInputStream test1 = new FileInputStream(filePath);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            fileNotFound = true;
+            initialized = true;
+            return;
+        }
         properties = new Properties();
-        propertiesFileInputStream = new FileInputStream(filePath);
-        properties.load(propertiesFileInputStream);
+        try {
+            propertiesFileInputStream = new FileInputStream(filePath);
+            properties.load(propertiesFileInputStream);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        initialized = true;
     }
 
     public static int getHighScore(){
+        if (!initialized) init();
+        if (fileNotFound) return -1;
         return Integer.parseInt(properties.getProperty("highscore"));
     }
 
     public static int getHighStreak(){
+        if (!initialized) init();
+        if (fileNotFound) return -1;
         return Integer.parseInt(properties.getProperty("highstreak"));
     }
 
     public static void setHighScore(int score){
+        if (!initialized) init();
+        if (fileNotFound) return;
         try {
             propertiesFileOutputStream = new FileOutputStream(filePath);
         } catch (FileNotFoundException e) {
@@ -41,6 +62,8 @@ public class HighScoreNStreak {
     }
 
     public static void setHighStreak(int streak){
+        if (!initialized) init();
+        if (fileNotFound) return;
         try {
             propertiesFileOutputStream = new FileOutputStream(filePath);
         } catch (FileNotFoundException e) {
