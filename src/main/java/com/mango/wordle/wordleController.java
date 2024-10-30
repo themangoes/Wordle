@@ -3,6 +3,7 @@ package com.mango.wordle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -11,6 +12,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import org.w3c.dom.Text;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -48,7 +50,9 @@ public class wordleController{
         @FXML
         private Label timesPlayedLabel;
         @FXML
-        private Label invalidWordLabel;
+        private Label cheat;
+        @FXML
+        private Button cheatButton;
 
         private int charNum;
         private int guessNum;
@@ -58,6 +62,8 @@ public class wordleController{
         private int currentPoints;
         private int totalPoints;
         private int timesPlayed;
+        private int highestScore;
+        private int highestStreak;
         private String word;
 
         public wordleController(){
@@ -71,13 +77,17 @@ public class wordleController{
                 guessNum = 1;
                 curGuess = GuessOne;
                 streak = 0;
+                timesPlayed = 1;
+                highestScore = HighScoreNStreak.getHighScore();
+                highestStreak = HighScoreNStreak.getHighStreak();
                 gameEndOverlay.setVisible(false);
                 wordsAnchorPane.setOnKeyPressed((KeyEvent e) -> typeChar(e));
                 initialized = true;
+                cheatButton.setVisible(true);
         }
 
         @FXML
-        private void checkButton(){
+        private void checkButton() {
 
                 boolean status = false;
                 if (charNum == 4 && guessNum <= 6) {
@@ -132,19 +142,25 @@ public class wordleController{
 
         }
 
-        private void guessedCorrectly(){
+        private void guessedCorrectly() {
                 streak++;
-                timesPlayed++;
                 totalPoints += currentPoints;
                 gameEndOverlay.setVisible(true);
                 gameEndStatus.setText("Correct Guess!");
                 setEndLabels();
+                if (totalPoints > highestScore){
+                        highestScore = totalPoints;
+                        HighScoreNStreak.setHighScore(totalPoints);
+                }
+                if (streak > highestStreak){
+                        highestStreak = streak;
+                        HighScoreNStreak.setHighStreak(streak);
+                }
         }
 
         private void guessedIncorrectly(){
                 totalPoints += currentPoints;
                 streak = 0;
-                timesPlayed++;
                 gameEndOverlay.setVisible(true);
                 gameEndStatus.setText("Incorrect Guess.");
                 setEndLabels();
@@ -155,11 +171,13 @@ public class wordleController{
                 totalPointsLabel.setText(String.valueOf(totalPoints));
                 currentStreakLabel.setText(String.valueOf(streak));
                 timesPlayedLabel.setText(String.valueOf(timesPlayed));
+                highestScoreLabel.setText(String.valueOf(highestScore));
+                highestStreakLabel.setText(String.valueOf(highestStreak));
         }
 
         @FXML
         private void reset(){
-
+                timesPlayed++;
                 guessNum = 1;
                 charNum = -1;
                 currentPoints = 0;
@@ -229,6 +247,11 @@ public class wordleController{
                                 curGuess.get(++charNum).setText(e.getText().toUpperCase());
                         }
                 }
+        }
+
+        @FXML
+        private void cheat(ActionEvent e){
+                cheat.setText(word);
         }
 
         private void SomethingWentWrong() {
