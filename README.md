@@ -6,4 +6,4 @@ fully functional with words being checked if they are in the english language (m
 
 
 download the jar file and run it to try it out for yourself!
-(REQUIRES LATEST VERSION OF JAVA)
+(REQUIRES LATEST VERSION OF JAVA & AN INTERNET CONNECTION)
